@@ -19,14 +19,16 @@
 body {
     color: white;
     margin: 0px;
+    background-image: url("resources/background.png");
+    background-repeat: repeat;
     font-family: "Libre Baskerville", serif;
     background-color: #231f20;
 }
 
 header {
-    background-image: url("resources/background.png");
-    height: 200px;
     margin: 0px;
+    height: 200px;
+    padding: 10px;
     text-align: center;
     background-color: #000000;
     color: white;
@@ -36,7 +38,7 @@ header {
 footer {
     padding: 20px;
     margin-top: 40px;
-    background-image: url("resources/background.png");
+    background-color: #000000;
     color: white;
     display: flex;
     justify-content: space-around;
@@ -73,6 +75,20 @@ game > img {
     border-radius: 6px;
     max-width: 100%;
     height: auto;
+}
+
+player {
+    display: block;
+    text-align: center; 
+    padding: 30px;
+    margin: 0 auto;
+}
+
+player > p {
+    padding: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
 }
 
 a {
