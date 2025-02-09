@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Disdice</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Disdice">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body>
+  <header>
+    <a href="../../index.htm"><img src="../../resources/banner.png" alt="Lazy Duck Games Banner" id="banner"></a>
+  </header>
+
+  <player>
+      <h1>
+      Disdice
+      </h1>
+    <canvas id="unity-canvas" width=1280 height=720 tabindex="-1" style="width: 1280px; height: 720px; background: #231F20"></canvas>
+    <script src="Build/Disdice.loader.js"></script>
+    <script>
+      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+        // Mobile device style: fill the whole browser client area with the game canvas:
+        var meta = document.createElement('meta');
+        meta.name = 'viewport';
+        meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
+        document.getElementsByTagName('head')[0].appendChild(meta);
+
+        var canvas = document.querySelector("#unity-canvas");
+        canvas.style.width = "100%";
+        canvas.style.height = "100%";
+        canvas.style.position = "fixed";
+
+        document.body.style.textAlign = "left";
+      }
+
+      createUnityInstance(document.querySelector("#unity-canvas"), {
+        arguments: [],
+        dataUrl: "Build/Disdice.data.br",
+        frameworkUrl: "Build/Disdice.framework.js.br",
+        codeUrl: "Build/Disdice.wasm.br",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "ArtToomics",
+        productName: "Disdice",
+        productVersion: "1.7",
+        // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+        // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+      });
+    </script>
+    <h2>
+      Overview
+    </h2>
+    <p>
+      The main character is a 6-sided die that has to fight the other types of dice: the D4s, D10s and D20s. 
+      All this to assert his supremacy, because now the other types of dice seem to be taking over. 
+      There is no real ending: the goal is to survive as much as possible, as the dice increase, and to score the best score. 
+      You have at your disposal six weapons given by the number of faces that come up immediately after activating the "SHAKE" function. 
+      Each weapon is held by a different dice variant. 
+    </p>
+  </player>
+  <footer>
+    <div id="contact">
+      <h3 class="footerheadline">CONTACT</h3>
+      <p><a href="mailto:lazyduckdev@gmail.com">lazyduckdev@gmail.com</a></p>
+    </div>
+    <div>
+      <h3 class="footerheadline">LINKTREE</h3>
+      <p><a href="https://linktr.ee/lazy_duck_games" target="_blank">https://linktr.ee/lazy_duck_games</a></p>
+    </div>
+  </footer>
+</body>
+</html>
