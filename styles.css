@@ -41,20 +41,21 @@ section {
 
 footer {
     padding: 20px;
-    display: flex;
     height: 100px;
     margin-top: 50px;
-    text-align: right;
+    text-align: center;
     background-color: #000000;
     box-shadow: #000000 0px -30px 50px -10px;
 }
 
-footer > p > a > img{
-    width: 50%;
+
+footer > *{
+    display: inline;
+    padding: 10px;
 }
 
-footer > * {
-    padding: 10px;
+footer > p > a {
+    color: transparent; 
 }
 
 main {
