@@ -48,14 +48,24 @@ footer {
     box-shadow: #000000 0px -30px 50px -10px;
 }
 
-
 footer > *{
     display: inline;
     padding: 10px;
 }
 
+@media (max-width: 1280px) {
+    .hide-mobile {
+      display: none;
+    }
+}
+
 footer > p > a {
+    padding: 5px;
     color: transparent; 
+}
+
+footer > p > a > img {
+    width: 25px;
 }
 
 main {
@@ -63,6 +73,20 @@ main {
     max-width: 800px;
     margin: 0 auto;
 }
+
+slideshow {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+slide {
+    display:none;
+    border-radius: 1%;
+    width: 50%;
+}
+
 
 game {
     margin: 20px 0;
@@ -89,14 +113,14 @@ game > img {
     height: auto;
 }
 
-player {
+game-page {
     display: block;
     text-align: center; 
     padding: 30px;
     margin: 0 auto;
 }
 
-player > p {
+game-page > p {
     max-width: 800px;
     margin: 0 auto;
     text-align: left;
@@ -107,8 +131,31 @@ a {
 }
 
 
-player > h1 {
+game-page > h1 {
     font-size: 2rem;
+}
+
+.slideshow-button {
+    margin-top: 20px;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 6px;
+    background-color: #000000;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.slideshow-button:active {
+    background-color: #000000;
+    color: white;
+}
+
+.slideshow-button:hover {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
 }
 
 .game-button {
@@ -140,7 +187,17 @@ player > h1 {
     color: black;
 }
 
+.game-button:active {
+    background-color: #231f20;
+    color: white;
+}
+
 .jam-button:hover {
     background-color: hsl(332, 100%, 50%);
     color: black;
+}
+
+.jam-button:active {
+    background-color: #231f20;
+    color: white;
 }

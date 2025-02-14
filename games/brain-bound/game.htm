@@ -15,14 +15,14 @@
 
 <body>
   <header>
-    <a href="../../index.htm"><img src="../../resources/banner.png" alt="Lazy Duck Games Banner" id="banner"></a>
+    <a href="../../index.htm"><img src="../../resources/banner.png"></a>
   </header>
 
-  <player>
+  <game-page>
       <h1 style="margin-top: 30px; margin-bottom: 50px;">
         Brain Bound
       </h1>
-      <canvas id="unity-canvas" width=1280 height=720 tabindex="-1" style="width: 1280px; height: 720px; background: #231F20"></canvas>
+      <canvas id="unity-canvas" width=1280 height=720 tabindex="-1" style="width: 1280px; height: 720px; background: #000000"></canvas>
       <script src="Build/Brain Bound.loader.js"></script>
       <script>
       if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
@@ -66,9 +66,41 @@
       Controls
     </h2>
     <p style="text-align: center;">
-      • Left click: drag and drop
+      • Left click: select and place activities over the brain grid
     </p>
-  </player>
+    <h2 style="margin-top: 25px;">
+      Images
+    </h2>
+    <slideshow>
+      <img class="slide" style="width: 70%; border-radius: 1%;" src="../../resources/brain-bound/brain-bound-0.png">
+      <img class="slide" style="width: 70%; border-radius: 1%;" src="../../resources/brain-bound/brain-bound-1.png">
+      <img class="slide" style="width: 70%; border-radius: 1%;" src="../../resources/brain-bound/brain-bound-2.png">
+      <img class="slide" style="width: 70%; border-radius: 1%;" src="../../resources/brain-bound/brain-bound-3.png">
+      <img class="slide" style="width: 70%; border-radius: 1%;" src="../../resources/brain-bound/brain-bound-4.png">
+      <img class="slide" style="width: 70%; border-radius: 1%;" src="../../resources/brain-bound/brain-bound-5.png">
+    </slideshow>
+    <button class="slideshow-button" onclick="plus_slides(-1)">&#10094;</button>
+    <button class="slideshow-button" onclick="plus_slides(1)">&#10095;</button>
+  </game-page>
+  <script>
+    var slide_index = 1;
+    show_slide(slide_index);
+
+    function plus_slides(n) {
+      show_slide(slide_index += n);
+    }
+
+    function show_slide(index) {
+      var slides = document.getElementsByClassName("slide");
+      if (index > slides.length) {slide_index = 1}
+      if (index < 1) {slide_index = slides.length} ;
+      var i;
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slides[slide_index-1].style.display = "block";
+    }
+  </script>
   <footer>
     <p>
       <a href="mailto:lazyduckdev@gmail.com">
