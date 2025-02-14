@@ -22,13 +22,12 @@ body {
     background-image: url("resources/background.png");
     background-repeat: repeat;
     font-family: "Libre Baskerville", serif;
-    background-color: #231f20;
+    background-color: #000000;
 }
 
 header {
     margin: 0px;
     height: 200px;
-    width: 100%;
     padding: 10px;
     text-align: center;
     background-color: #000000;
@@ -36,24 +35,22 @@ header {
     box-shadow: #000000 0px 30px 50px 0px;
 }
 
+section {
+    margin-top: 50px;
+}
+
 footer {
-    width: 100%;
     padding: 20px;
-    height: 100px;
     display: flex;
+    height: 100px;
     margin-top: 50px;
     text-align: right;
     background-color: #000000;
     box-shadow: #000000 0px -30px 50px -10px;
 }
 
-footer > * 
-{
-    padding: 20px;
-}
-
-footer > p > a > img {
-    width: 75%;
+footer > * {
+    padding: 10px;
 }
 
 main {
@@ -95,18 +92,17 @@ player {
 }
 
 player > p {
-    padding: 30px;
     max-width: 800px;
     margin: 0 auto;
     text-align: left;
 }
 
 a {
-    color: white;
+    color: hsl(332, 100%, 50%);
 }
 
 
-h1 {
+player > h1 {
     font-size: 2rem;
 }
 
@@ -140,6 +136,6 @@ h1 {
 }
 
 .jam-button:hover {
-    background-color: #ff0077;
+    background-color: hsl(332, 100%, 50%);
     color: black;
 }
