@@ -170,6 +170,18 @@ game-page > h1 {
     text-align: center;
 }
 
+.video-button {
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 6px;
+    background-color: #231f20;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    text-align: center;
+}
+
 .jam-button {
     width: 100%;
     height: 50px;
@@ -180,6 +192,11 @@ game-page > h1 {
     font-size: 20px;
     cursor: pointer;
     text-align: center;
+}
+
+.video-button:hover {
+    background-color: #e92a2a;
+    color: black;
 }
 
 .game-button:hover {
