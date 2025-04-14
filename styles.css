@@ -87,6 +87,16 @@ slide {
     width: 50%;
 }
 
+panel {
+    margin: 20px 0;
+    display: grid;
+    color: black; 
+    text-align: left;
+    border: 0;
+    padding: 15px;
+    border-radius: 6px;
+    background-color: #fff;  
+}
 
 game {
     margin: 20px 0;
